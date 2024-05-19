@@ -5,11 +5,8 @@ from uuid import uuid4
 from datetime import datetime
 
 
-
 class BaseModel:
     """Rep the base model of the hbnh project"""
-
-
     def __init__(self, *args, **kwargs):
         """Initialize a new basemodel."""
 
