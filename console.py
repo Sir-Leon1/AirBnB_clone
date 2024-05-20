@@ -40,14 +40,14 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = "(hbnb) "
     __classes = {
-            "BaseModel",
-            "User",
-            "State",
-            "City",
-            "Place",
-            "Amenity",
-            "Review"
-            }
+        "BaseModel",
+        "User",
+        "State",
+        "City",
+        "Place",
+        "Amenity",
+        "Review"
+    }
 
     def emptyline(self):
         """Do nothing upon receiving an empty line."""
@@ -92,7 +92,7 @@ class HBNBCommand(cmd.Cmd):
         argl = parse(arg)
         if len(argl) == 0:
             print("** class name missing **")
-        elif arg[0] not in HBNBCommand.__classes:
+        elif argl[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         else:
             print(eval(argl[0])().id)
@@ -140,7 +140,7 @@ class HBNBCommand(cmd.Cmd):
         if len(argl) > 0 and argl[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         else:
-            obj = []
+            objl = []
             for obj in storage.all().values():
                 if len(argl) > 0 and argl[0] == obj.__class__.__name__:
                     objl.append(obj.__str__())
