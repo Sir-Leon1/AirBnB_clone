@@ -37,7 +37,7 @@ class HBNBCommand(cmd.Cmd):
 
     Attributes:
         prompt (str): The command prompt
-    "
+    """
     prompt = "(hbnb) "
     __classes = {
         "BaseModel",
