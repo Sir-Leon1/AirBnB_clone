@@ -26,7 +26,7 @@ def parse(arg):
             return retl
 
     else:
-        lexer = split(arg[:curvy_braces.span(), [0]])
+        lexer = split(arg[:curly_braces.span(), [0]])
         retl = [i.strip(",") for i in lexer]
         retl.append(curly_braces.group())
         return retl
