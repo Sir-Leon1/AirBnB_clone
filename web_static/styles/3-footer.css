@@ -5,7 +5,7 @@ footer {
     width: 100%;
     border-top: 1px solid #CCCCCC;
     display: flex;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     justify-content: center;
     align-items: center;
