@@ -52,7 +52,6 @@
     padding: 30px 0px 30px 30px;
 }
 
-
 .filters .locations li {
     margin: 0 auto 6px 3em;
     padding: 0;
@@ -92,6 +91,43 @@
     font-weight: 600;
     padding: 15px 0 0 20px;
     margin: 0 0 0 7px;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 600px) {
+    .filters {
+        height: auto; /* Adjust height for vertical stacking */
+        width: 97%;
+        display: block; /* Change to block for vertical stacking on small screens */
+    }
+
+    .filters button {
+        width: 90%; /* Adjust button width for small screens */
+        margin: 10px auto; /* Center button horizontally */
+        float: none; /* Remove float for vertical stacking */
+        display: block;
+    }
+
+    .filters .locations,
+    .filters .amenities {
+        width: 100%; /* Full width on small screens */
+        float: none; /* Remove float for vertical stacking */
+        margin-bottom: 10px; /* Add space between sections */
+        margin-top: 10px; /* Add space between sections */
+        padding-bottom: 10px; /* Remove padding for vertical stacking */
+        height: auto; /* Adjust height for vertical stacking */
+        border-bottom: 1px solid #dddddd; /* Add border between sections */
+    }
+
+    .filters .locations {
+        border-right: none; /* Remove border for vertical stacking */
+    }
+
+    .filters .locations:hover .popover,
+    .filters .amenities:hover .popover {
+        z-index: 1;
+        display: block;
+    }
 }
 
 
